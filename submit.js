@@ -28,9 +28,9 @@ for (let i = 0; i < e.length; i++) {
 for(let i=0;i<e.length;i++){
     emails_submiteed[i]=e[i];
 }
-// for(let i=0;i<emails_submiteed.length;i++){
-//     console.log(emails_submiteed[i]);
-// }
+for(let i=0;i<emails_submiteed.length;i++){
+    console.log(emails_submiteed[i]);
+}
 setInterval(checkemail,1000);
 function checkemail(){
     $("#form-success").text("");
