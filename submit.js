@@ -1,4 +1,5 @@
 var emails_submiteed=[];
+console.log("console.log")
 var count=0;
 var name=0;
 var button=document.getElementById("submit")
