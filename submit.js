@@ -5,7 +5,7 @@ var name=0;
 var button=document.getElementById("submit")
 var url = "https://script.google.com/macros/s/AKfycbwwEIVmx0NaO_6FbTJRq5kt8_F-CEHAkgxdtNTUzL5jLOF8pmx8q3yKK-XqMhXZD4U/exec?callback=loadData";
 // // Make an AJAX call to Google Script
-jQuery.ajax({
+$.ajax({
 crossDomain: true,
 url: url,
 method: "GET",
