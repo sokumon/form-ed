@@ -3,7 +3,7 @@ console.log("console.log")
 var count=0;
 var name=0;
 var button=document.getElementById("submit")
-var url = "https://script.google.com/macros/s/AKfycbxbe4UKv2pGVAdducm0_Lw6st2zLvJ2wkX8jEaST_qrCxm5s19_TS84QeuppbjKuHmy/exec?callback=loadData";
+var url = "https://script.google.com/macros/s/AKfycbwRqAh3pI804N3rR8h-1OK5zuHNKyo3cqalgVqDgbNnp6ERQmItHRhp6z5GC_mtiOnR/exec?callback=loadData";
 // // Make an AJAX call to Google Script
 jQuery.ajax({
 credentials:"true",
