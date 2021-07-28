@@ -3,14 +3,24 @@ console.log("console.log")
 var count=0;
 var name=0;
 var button=document.getElementById("submit")
-var url = "https://script.google.com/macros/s/AKfycbwwEIVmx0NaO_6FbTJRq5kt8_F-CEHAkgxdtNTUzL5jLOF8pmx8q3yKK-XqMhXZD4U/exec?callback=loadData";
+var url = "https://script.google.com/macros/s/AKfycbxbe4UKv2pGVAdducm0_Lw6st2zLvJ2wkX8jEaST_qrCxm5s19_TS84QeuppbjKuHmy/exec?callback=loadData";
 // // Make an AJAX call to Google Script
-$.ajax({
-crossDomain: true,
+jQuery.ajax({
+credentials:"true",
+
+crossDomain: "true",
 url: url,
-method: "GET",
+method: "POST",
 dataType: "jsonp"
 });
+// var fetchRe=fetch(url,{
+//     crossDomain: "true",
+//     url: url,
+//     method: "GET",
+//     dataType: "jsonp",
+//     }
+//     )
+// fetchRe.then(res=>console.log(res))
 
 //  // log the returned data
 function loadData(e){
