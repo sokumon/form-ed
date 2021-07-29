@@ -7,7 +7,6 @@ var url = "https://script.google.com/macros/s/AKfycbwRqAh3pI804N3rR8h-1OK5zuHNKy
 // // Make an AJAX call to Google Script
 jQuery.ajax({
 credentials:"true",
-
 crossDomain: "true",
 url: url,
 method: "POST",
