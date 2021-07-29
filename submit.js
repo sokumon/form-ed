@@ -3,16 +3,19 @@ console.log("console.log")
 var count=0;
 var name=0;
 var button=document.getElementById("submit")
-var url = "https://script.google.com/macros/s/AKfycbwRqAh3pI804N3rR8h-1OK5zuHNKyo3cqalgVqDgbNnp6ERQmItHRhp6z5GC_mtiOnR/exec?callback=loadData";
+var url = "https://script.google.com/macros/s/AKfycbwQ7AtPT-OMfzBXW_joqhxN8jZDyXwksHFnes2tey_377S4z8nKea2iQ-Cp0YcgQyLu/exec?callback=?";
 // // Make an AJAX call to Google Script
-jQuery.ajax({
-crossDomain: "true",
-url: url,
-method: "POST",
-dataType: "jsonp",
-xhrFields: {
-    withCredentials: true
-},
+// jQuery.ajax({
+// crossDomain: "true",
+// url: url,
+// method: "POST",
+// dataType: "jsonp",
+// xhrFields: {
+//     withCredentials: true
+// },
+// });
+jQuery.getJSON(url,function( data ){
+    console.log(data);
 });
 // var fetchRe=fetch(url,{
 //     crossDomain: "true",
@@ -24,48 +27,48 @@ xhrFields: {
 // fetchRe.then(res=>console.log(res))
 
 //  // log the returned data
-function loadData(e){
-// for (let i = 0; i < 9; i++) {
-//     e.pop()
-// cleaning the data 
-for (let i = 0; i < e.length; i++) {
-    if (e[i]==""){
-        count++;
-    }
-}
-// for(let i=0;i<=count;i++){
-//     e.pop()
+// function loadData(e){
+// // for (let i = 0; i < 9; i++) {
+// //     e.pop()
+// // cleaning the data 
+// for (let i = 0; i < e.length; i++) {
+//     if (e[i]==""){
+//         count++;
+//     }
 // }
-// adding it into a new array for local use
-for(let i=0;i<e.length;i++){
-    emails_submiteed[i]=e[i];
-}
-for(let i=0;i<emails_submiteed.length;i++){
-    console.log(emails_submiteed[i]);
-}
-setInterval(checkemail,1000);
-function checkemail(){
-    $("#form-success").text("");
-    button.disabled=false;
-    var input_box=$("#email").val()
-    for(var i=0;i<emails_submiteed.length;i++){
-    if(input_box==emails_submiteed[i]){
-        $("#form-success").text("Welcome back");
-        button.disabled=true;
-    }
-    }
-}
-}
-function request_it(){
-    jQuery.ajax({
-        crossDomain: true,
-        url: url,
-        method: "GET",
-        dataType: "jsonp"
-        });
-    console.log("in rrequest_it")
-}
-$("#form").hide().fadeIn('120');
+// // for(let i=0;i<=count;i++){
+// //     e.pop()
+// // }
+// // adding it into a new array for local use
+// for(let i=0;i<e.length;i++){
+//     emails_submiteed[i]=e[i];
+// }
+// for(let i=0;i<emails_submiteed.length;i++){
+//     console.log(emails_submiteed[i]);
+// }
+// setInterval(checkemail,1000);
+// function checkemail(){
+//     $("#form-success").text("");
+//     button.disabled=false;
+//     var input_box=$("#email").val()
+//     for(var i=0;i<emails_submiteed.length;i++){
+//     if(input_box==emails_submiteed[i]){
+//         $("#form-success").text("Welcome back");
+//         button.disabled=true;
+//     }
+//     }
+// }
+// }
+// function request_it(){
+//     jQuery.ajax({
+//         crossDomain: true,
+//         url: url,
+//         method: "GET",
+//         dataType: "jsonp"
+//         });
+//     console.log("in rrequest_it")
+// }
+// $("#form").hide().fadeIn('120');
 $("#form").submit(function(event){
 event.preventDefault();
 $.ajax({
