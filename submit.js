@@ -6,11 +6,13 @@ var button=document.getElementById("submit")
 var url = "https://script.google.com/macros/s/AKfycbwRqAh3pI804N3rR8h-1OK5zuHNKyo3cqalgVqDgbNnp6ERQmItHRhp6z5GC_mtiOnR/exec?callback=loadData";
 // // Make an AJAX call to Google Script
 jQuery.ajax({
-credentials:"true",
 crossDomain: "true",
 url: url,
 method: "POST",
-dataType: "jsonp"
+dataType: "jsonp",
+xhrFields: {
+    withCredentials: true
+},
 });
 // var fetchRe=fetch(url,{
 //     crossDomain: "true",
