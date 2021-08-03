@@ -3,7 +3,7 @@ console.log("console.log")
 var count=0;
 var name=0;
 var button=document.getElementById("submit")
-
+var form=document.getElementById("form")
 var url = "https://script.google.com/macros/s/AKfycbzzSOh1tDjV1TIzFLjR4_vtQb9LEaJe2MRKOyim/exec?callback=?";
 // // Make an AJAX call to Google Script
 // jQuery.ajax({
@@ -42,9 +42,9 @@ for (let i = 0; i < e.length; i++) {
 for(let i=0;i<e.length;i++){
     emails_submiteed[i]=e[i];
 }
-for(let i=0;i<emails_submiteed.length;i++){
-    console.log(emails_submiteed[i]);
-}
+// for(let i=0;i<emails_submiteed.length;i++){
+//     console.log(emails_submiteed[i]);
+// }
 setInterval(checkemail,1000);
 function checkemail(){
     $("#form-success").text("");
