@@ -11,17 +11,17 @@ if ('caches' in window){
         cache.match(url_link_1).then(function(res){return res.json()})
         .then(function(data){
             // console.log(data.emails[0]);
-            for(let i=0;i<data.emails.length;i++){
-                    console.log(data.emails[i]);
-                // emails_submiteed[i]=data.emails[i];
-            }
+            // for(let i=0;i<data.emails.length;i++){
+            //         console.log(data.emails[i]);
+            //     // emails_submiteed[i]=data.emails[i];
+            // }
             setInterval(checkemail,1000);
-            console.log("checkmail begins");
+            // console.log("checkmail begins");
             function checkemail(){
                 $("#checked").text("");
                 button.disabled=false;
                 var input_box=$("#email").val()
-                console.log(input_box);
+                // console.log(input_box);
                 for(var i=0;i<data.emails.length;i++){
                 if(input_box==data.emails[i]){
                     $("#checked").text("Welcome back");
