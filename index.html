@@ -6,7 +6,7 @@
     <!-- <meta name="google-signin-client_id" content="240164670724-gvvanlfg8u3mkcf7kloibknmok6au4ci.apps.googleusercontent.com"> -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Formed</title>
-    <script src="https://apis.google.com/js/platform.js"></script>
+    <!-- <script src="https://apis.google.com/js/platform.js"></script> -->
 </head>
 <style>
     form{
@@ -14,26 +14,35 @@
     }
 </style>
 <body class="w3-red">
-    <div class="w3-center w3-large ">
-    <h1>FILL THE FORM</h1>
-    <form id="form" class="w3-padding">
+    <div class="w3-center w3-xxxlarge">
+    <h1 class=" w3-xxxlarge">FILL THE FORM</h1>
+    <form id="form" class="w3-padding  w3-xxlarge">
         <label for="entry.1911151237">Email:</label>
         <input name="entry.1911151237" type="email" id="email"class="" required>
         <input type="hidden" name="usp" value="pp_url">
         <input type="hidden" name="submit" value="Submit">
         <button type="submit" id="submit" class="w3-button w3-yellow w3-round-large w3-hover-black">Submit</button>
     </form>
-    <div id="form-success" class="w3-padding w3-large"><h2></h2>
+    <div id="form-success" class="w3-padding w3-xxlarge"><h2></h2>
     </div>
-    <div id="checked"></div>
+    <div id="checked" class="w3-xxlarge"></div>
+    <h3 class="w3-xxlarge">Testing Tips:</h3>
+        <li class="w3-xxlarge">Enter your email in the box and click the submit button</li>
+        <li class="w3-xxlarge">For a successful submission, it should show a "Thanks for Submitting" message</li>
+        <li class="w3-xxlarge">Reload the page 10 times</li>
+        <li class="w3-xxlarge">Enter the same email once again into the input box</li>
+        <li class="w3-xxlarge">After this you should get a "Welcome Back" message</li>
+        <div class="w3-xxlarge w3-text-black">Note: If you dont get any of the above message kindly report to me</div>
+        <div class="w3-xxlarge w3-text-black">Thanks for testing!!!</div>
     <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
     </div>
+    
     <script
     src="https://code.jquery.com/jquery-3.6.0.js"
     integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
     <script src="submit.js" type="text/javascript"></script> 
-    
+    <script src="cache.js"></script>
     <!--<script src="checkit.js"></script>-->
 </body>
 </html>
