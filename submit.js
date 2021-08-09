@@ -4,7 +4,7 @@ var count=0;
 var name=0;
 var button=document.getElementById("submit")
 var form=document.getElementById("form")
-var url = "https://script.google.com/macros/s/AKfycbzzSOh1tDjV1TIzFLjR4_vtQb9LEaJe2MRKOyim/exec?callback=?";
+var url = "https://script.google.com/macros/s/AKfycbzzSOh1tDjV1TIzFLjR4_vtQb9LEaJe2MRKOyim/exec";
 // // Make an AJAX call to Google Script
 // jQuery.ajax({
 // crossDomain: "true",
@@ -30,6 +30,7 @@ function loadData(e){
 // for (let i = 0; i < 9; i++) {
 //     e.pop()
 // cleaning the data 
+console.log(e)
 for (let i = 0; i < e.length; i++) {
     if (e[i]==""){
         count++;
