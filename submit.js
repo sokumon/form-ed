@@ -30,8 +30,8 @@ function loadData(e){
 // for (let i = 0; i < 9; i++) {
 //     e.pop()
 // cleaning the data 
-console.log(e)
-for (let i = 0; i < e.length; i++) {
+console.log(e.emails[0])
+for (let i = 0; i < e.emails.length; i++) {
     if (e[i]==""){
         count++;
     }
@@ -40,8 +40,8 @@ for (let i = 0; i < e.length; i++) {
 //     e.pop()
 // }
 // adding it into a new array for local use
-for(let i=0;i<e.length;i++){
-    emails_submiteed[i]=e[i];
+for(let i=0;i<e.emails.length;i++){
+    emails_submiteed[i]=e.emails[i];
 }
 // for(let i=0;i<emails_submiteed.length;i++){
 //     console.log(emails_submiteed[i]);
