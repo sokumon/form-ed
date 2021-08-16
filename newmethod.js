@@ -40,7 +40,7 @@ function takeData(e){
         newe_emails=0;
     }else if(e.emails.length<no_of_emails){
         for(var i=0;i<e.emails.length;i++){
-            console.log(e.emails[i]);
+            // console.log(e.emails[i]);
             emails_recieved.push(e.emails[i]);
             localStorage.setItem((i+no_of_emails).toString(),e.emails[i]);
         }
@@ -58,7 +58,7 @@ function checkEmail(){
     $("#checked").text("");
     button.disabled=false;
     var input_box=$("#email").val();
-    // console.log(localStorage.getItem("0"));
+    //console.log(localStorage.getItem("0"));
     for(var i=0;i<no_of_emails+newe_emails;i++){
         var name=i.toString();
         if(input_box==localStorage.getItem(name)){
